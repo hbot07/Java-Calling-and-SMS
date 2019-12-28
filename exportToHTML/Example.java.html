@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Example.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Example.java</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">import </span><span class="s1">com.twilio.Twilio</span><span class="s0">;</span>
+<a name="l2"><span class="ln">2    </span></a>import <span class="s1">com.twilio.rest.api.v2010.account.Call</span><span class="s0">;</span>
+<a name="l3"><span class="ln">3    </span></a>import <span class="s1">com.twilio.type.PhoneNumber</span><span class="s0">;</span>
+<a name="l4"><span class="ln">4    </span></a>
+<a name="l5"><span class="ln">5    </span></a>import <span class="s1">java.net.URI</span><span class="s0">;</span>
+<a name="l6"><span class="ln">6    </span></a>
+<a name="l7"><span class="ln">7    </span></a>public class <span class="s1">Example {</span>
+<a name="l8"><span class="ln">8    </span></a>    <span class="s2">// Find your Account Sid and Token at twilio.com/console</span>
+<a name="l9"><span class="ln">9    </span></a>    <span class="s0">private static final </span><span class="s1">String ACCOUNT_SID =</span>
+<a name="l10"><span class="ln">10   </span></a>            <span class="s3">&quot;ACaa21b31833e380eee0df1609dd0ed8d6&quot;</span><span class="s0">;</span>
+<a name="l11"><span class="ln">11   </span></a>    private static final <span class="s1">String AUTH_TOKEN =</span>
+<a name="l12"><span class="ln">12   </span></a>            <span class="s3">&quot;beab2cb698311a0b26887048f4dc0d06&quot;</span><span class="s0">;</span>
+<a name="l13"><span class="ln">13   </span></a>
+<a name="l14"><span class="ln">14   </span></a>    public static void <span class="s1">main() {</span>
+<a name="l15"><span class="ln">15   </span></a>        Twilio.init(ACCOUNT_SID<span class="s0">, </span><span class="s1">AUTH_TOKEN)</span><span class="s0">;</span>
+<a name="l16"><span class="ln">16   </span></a>        <span class="s1">Call call = Call.creator(</span>
+<a name="l17"><span class="ln">17   </span></a>                <span class="s0">new </span><span class="s1">com.twilio.type.PhoneNumber(</span><span class="s3">&quot;+918770951130&quot;</span><span class="s1">)</span><span class="s0">,</span>
+<a name="l18"><span class="ln">18   </span></a>                new <span class="s1">com.twilio.type.PhoneNumber(</span><span class="s3">&quot;+12055649898&quot;</span><span class="s1">)</span><span class="s0">,</span>
+<a name="l19"><span class="ln">19   </span></a>                <span class="s1">URI.create(</span><span class="s3">&quot;https://high-voltage-tenden.000webhostapp.com/response.xml&quot;</span><span class="s1">))</span>
+<a name="l20"><span class="ln">20   </span></a>                .create()<span class="s0">;</span>
+<a name="l21"><span class="ln">21   </span></a>
+<a name="l22"><span class="ln">22   </span></a>        <span class="s1">System.out.println(call.getSid())</span><span class="s0">;</span>
+<a name="l23"><span class="ln">23   </span></a>    <span class="s1">}</span>
+<a name="l24"><span class="ln">24   </span></a>}</pre>
+</body>
+</html>
