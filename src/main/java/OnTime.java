@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class OnTime {
 static Scanner sc=new Scanner(System.in);
-    public static void main(String[] args) {
+    public static void main() {
         System.out.println("Please enter at what time you want to send:");
         System.out.println("Hours");
         byte SHours=sc.nextByte();

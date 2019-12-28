@@ -1,6 +1,5 @@
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Call;
-import com.twilio.type.PhoneNumber;
 
 import java.net.URI;
 import java.util.Scanner;
@@ -18,7 +17,7 @@ Scanner sc=new Scanner(System.in);
         Call call = Call.creator(
                 new com.twilio.type.PhoneNumber(PrivateInfo.to),
                 new com.twilio.type.PhoneNumber(PrivateInfo.from),
-                URI.create("https://high-voltage-tenden.000webhostapp.com/response.xml"))
+                URI.create("https://high-voltage-tenden.000webhostapp.com/response.xml"))//this is twiml which is executed when call is accepted
                 .create();
 
         System.out.println(call.getSid());//If you wonder what the call would sound like - it would just drop in a
