@@ -1,10 +1,11 @@
+//Exception thrown ? Does it say Authenticate ?
 import java.util.Scanner;
 
 public class Main {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        System.out.println("Available opitions : \n " +
+        System.out.println("Available opitions : \n" +
                 "1)Place a call \n" +
                 "2)Send an SMS \n" +
                 "3)Schedule an SMS or call \n" +

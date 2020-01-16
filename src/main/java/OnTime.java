@@ -1,4 +1,3 @@
-import com.twilio.example.Example;
 
 import java.util.Date;
 import java.text.DateFormat;
@@ -13,6 +12,7 @@ static Scanner sc=new Scanner(System.in);
         byte SHours=sc.nextByte();
         System.out.println("Minutes:");
         byte SMins=sc.nextByte();
+        //There are many other ways to schedule a job . I chose this one for its simplicity .
         byte CHours=100,CMins=100;
         while(SHours!=CHours) {
             while(CMins!=SMins){

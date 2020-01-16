@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class SmsSender {
     static Scanner sc=new Scanner(System.in);
-    // Find your Account Sid and Auth Token at twilio.com/console
     private static final String ACCOUNT_SID =
             PrivateInfo.ACCOUNT_SID;
     private static final String AUTH_TOKEN =

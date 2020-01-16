@@ -7,14 +7,14 @@ public class CallFlooder {
     System.out.println("How many times to call?");
         int n = sc.nextInt();
         System.out.println("What should be the delay between two calls(in seconds)?");
-    int seconds=sc.nextInt();
+        int delayInSeconds=sc.nextInt();
         sc.close();
         while(n!=0)
         {
             n--;
             PlaceACall.main();
             try {
-                Thread.sleep(1000*seconds); // 1000ms = 10s
+                Thread.sleep(1000*delayInSeconds); // 1000ms = 1s
             } catch(InterruptedException ex){
 
                 System.exit(0);
