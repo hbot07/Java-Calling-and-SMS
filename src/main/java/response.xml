@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Say voice="alice">hello!</Say>
+    <Play>https://demo.twilio.com/docs/classic.mp3</Play>
+    <Say voice="alice">bye!</Say>
+</Response>
