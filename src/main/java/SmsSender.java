@@ -13,14 +13,20 @@ public class SmsSender {
 
     public static void main() {
 
-        Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
-        System.out.println("What should the message say ?");
-        Message message = Message
-                .creator(new PhoneNumber(PrivateInfo.to), // to
-                        new PhoneNumber(PrivateInfo.from), // from
-                        sc.nextLine())
-                .create();
+        try {
+            Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+            System.out.println("What should the message say ?");
+            Message message = Message
+                    .creator(new PhoneNumber(PrivateInfo.to), // to
+                            new PhoneNumber(PrivateInfo.from), // from
+                            sc.nextLine())
+                    .create();
+
 
         System.out.println(message.getSid());
+        }catch(Exception e)
+        {
+            System.out.println("Did you add your information to PrivateInfo.java correctly ?");
+        }
     }
 }
